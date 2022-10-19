@@ -32,6 +32,7 @@ public class OrderService {
         List<OrderDTO> orderDTOList = new ArrayList<>();
         for (Order order : orderList) {
             OrderDTO orderDTO = new OrderDTO();
+            orderDTO.setId(order.getId());
             orderDTO.setInstant(order.getInstant());
             orderDTO.setClient(new ClientDTO(order.getClient()));
             if(order.getProducts() != null) {
