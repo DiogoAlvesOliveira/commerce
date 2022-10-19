@@ -33,8 +33,8 @@ public class DBService {
 
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 
-        Client client1 = new Client(null, "Diogo", "Alves", "diogo.dream89@gmail.com");
-        Client client2 = new Client(null, "Miguel", "Alves", "miguel@gmail.com");
+        Client client1 = new Client("Diogo", "Alves", "diogo.dream89@gmail.com");
+        Client client2 = new Client("Miguel", "Alves", "miguel@gmail.com");
 
         Address address1 = new Address(null, "Rua José Ramos de Vasconcelos",
                 "1079", "Casa", "Pau Amarelo", "Paulista", "Pernambuco",
