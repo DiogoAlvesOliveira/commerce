@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.net.URI;
+import java.util.List;
 
 @RestController
 @RequestMapping(value = "/address")
@@ -29,5 +30,11 @@ public class AddressResource {
         Address address = addressService.insertClientAddress(client, addressDTO);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(address.getId()).toUri();
         return ResponseEntity.created(uri).build();
+    }
+    @GetMapping(value = "/{email}")
+    public ResponseEntity<List<AddressDTO>> findByEmailAddress(@PathVariable String email){
+        Client client = clientService.findByEmail(email);
+        List<AddressDTO> addressList = addressService.findByEmailAddress(client);
+        return ResponseEntity.ok().body(addressList);
     }
 }

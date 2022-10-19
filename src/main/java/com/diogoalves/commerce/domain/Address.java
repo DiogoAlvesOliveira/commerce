@@ -33,7 +33,7 @@ public class Address implements Serializable {
     public Address() {
     }
 
-    public Address(Integer id, String address, String number, String complement, String neighborhood, String city, String state, String country, String cep, Client client) {
+    public  Address(Integer id, String address, String number, String complement, String neighborhood, String city, String state, String country, String cep, Client client) {
         this.id = id;
         this.address = address;
         this.number = number;
