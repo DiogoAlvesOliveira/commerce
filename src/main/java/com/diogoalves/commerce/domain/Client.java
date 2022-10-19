@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +22,7 @@ public class Client implements Serializable {
     private String surname;
 
     @Column(unique = true)
+    @Email
     private String email;
 
     @OneToMany(mappedBy="client")
