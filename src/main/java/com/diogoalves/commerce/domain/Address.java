@@ -18,6 +18,7 @@ public class Address implements Serializable {
 
     private String address;
     private String number;
+    private String complement;
     private String neighborhood;
     private String city;
     private String state;
@@ -32,10 +33,11 @@ public class Address implements Serializable {
     public Address() {
     }
 
-    public Address(Integer id, String address, String number, String neighborhood, String city, String state, String country, String cep, Client client) {
+    public Address(Integer id, String address, String number, String complement, String neighborhood, String city, String state, String country, String cep, Client client) {
         this.id = id;
         this.address = address;
         this.number = number;
+        this.complement = complement;
         this.neighborhood = neighborhood;
         this.city = city;
         this.state = state;

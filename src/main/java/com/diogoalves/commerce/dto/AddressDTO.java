@@ -17,6 +17,9 @@ public class AddressDTO implements Serializable {
     private String country;
     private String cep;
 
+    public AddressDTO() {
+    }
+
     public AddressDTO(CepDTO cepDTO) {
         this.address = cepDTO.getLogradouro();
         this.number = cepDTO.getNumero();
