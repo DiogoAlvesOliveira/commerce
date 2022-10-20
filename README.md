@@ -19,11 +19,14 @@ O commerce foi desenvolvido pensando como um e-commerce funciona.
 
 ## Back-end:
 
-* Java
+* Java 11
   1. API Rest
   2. Exceptions personalizadas
   3. Documentação swagger
 * Spring Boot
+* Maven
+* Hibernate
+* MySQL
 
 ## Deploy
 
