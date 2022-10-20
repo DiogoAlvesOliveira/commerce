@@ -29,5 +29,5 @@ O commerce foi desenvolvido pensando em como um e-commerce funciona.
  
 <h2 align="center"> 📷 Screenshot da API do projeto: </h2>
 <p align="center">
-<img width="600" src="![image](https://user-images.githubusercontent.com/62778974/196845066-966d864b-5647-429e-9339-22a37db14568.png)">
+![image](https://user-images.githubusercontent.com/62778974/196845405-390a4c3b-6892-4f21-a29c-e5ce31e3ab7e.png)
 </p>
