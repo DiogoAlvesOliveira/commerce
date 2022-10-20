@@ -28,6 +28,5 @@ O commerce foi desenvolvido pensando em como um e-commerce funciona.
 * Documentação Swagger (https://diogo-alves-commerce.herokuapp.com/swagger-ui.html)
  
 <h2 align="center"> 📷 Screenshot da API do projeto: </h2>
-<p align="center">
-![image](https://user-images.githubusercontent.com/62778974/196845405-390a4c3b-6892-4f21-a29c-e5ce31e3ab7e.png)
-</p>
+<p align="center"></p>
+<img src="https://user-images.githubusercontent.com/62778974/196845405-390a4c3b-6892-4f21-a29c-e5ce31e3ab7e.png">
