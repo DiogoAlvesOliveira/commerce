@@ -20,30 +20,31 @@ public class ProductService {
 
     public List<ProductDTO> findAll() {
         List<Product> products = productRepository.findAll();
-        List<ProductDTO> productDTOList = products.stream().map(obj -> new ProductDTO(obj)).collect(Collectors.toList());
-        return productDTOList;
+        return products.stream().map(ProductDTO::new).collect(Collectors.toList());
     }
 
     public ProductWithOrdesDTO findById(Integer id) {
         Optional<Product> product = productRepository.findById(id);
-        if (product.isPresent()) return this.fromProductWithOrdesDTO(product);
+        if (product.isPresent()) return this.fromProductWithOrdersDTO(product);
         throw new ObjectNotFoundException("Could not find Product id " + id);
     }
 
-    private ProductWithOrdesDTO fromProductWithOrdesDTO(Optional<Product> product) {
+    private ProductWithOrdesDTO fromProductWithOrdersDTO(Optional<Product> product) {
         ProductWithOrdesDTO productDTO = new ProductWithOrdesDTO();
-        productDTO.setId(product.get().getId());
-        productDTO.setName(product.get().getName());
-        productDTO.setDescription(product.get().getDescription());
-        productDTO.setPrice(product.get().getPrice());
-        if (product.get().getOrders() != null) {
-            for (Order order : product.get().getOrders()){
-                OrderWithOffProductDTO orderDTO = new OrderWithOffProductDTO();
-                orderDTO.setId(order.getId());
-                orderDTO.setInstant(order.getInstant());
-                orderDTO.setClient(new ClientDTO(order.getClient()));
+        if(product.isPresent() ) {
+            productDTO.setId(product.get().getId());
+            productDTO.setName(product.get().getName());
+            productDTO.setDescription(product.get().getDescription());
+            productDTO.setPrice(product.get().getPrice());
+            if (product.get().getOrders() != null) {
+                for (Order order : product.get().getOrders()) {
+                    OrderWithOffProductDTO orderDTO = new OrderWithOffProductDTO();
+                    orderDTO.setId(order.getId());
+                    orderDTO.setInstant(order.getInstant());
+                    orderDTO.setClient(new ClientDTO(order.getClient()));
 
-                productDTO.getOrders().add(orderDTO);
+                    productDTO.getOrders().add(orderDTO);
+                }
             }
         }
         return productDTO;
