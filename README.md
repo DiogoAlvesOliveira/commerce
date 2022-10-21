@@ -23,6 +23,7 @@ O commerce foi desenvolvido pensando como um e-commerce funciona.
   1. API Rest
   2. Exceptions personalizadas
   3. Documentação swagger
+  4. Testes unitários realizado
 * Spring Boot
 * Maven
 * Hibernate
