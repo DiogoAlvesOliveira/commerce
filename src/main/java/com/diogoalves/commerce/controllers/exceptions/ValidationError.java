@@ -1,4 +1,4 @@
-package com.diogoalves.commerce.resources.exceptions;
+package com.diogoalves.commerce.controllers.exceptions;
 
 import java.util.ArrayList;
 import java.util.List;

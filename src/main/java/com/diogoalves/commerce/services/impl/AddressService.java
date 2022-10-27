@@ -1,9 +1,10 @@
-package com.diogoalves.commerce.services;
+package com.diogoalves.commerce.services.impl;
 
 import com.diogoalves.commerce.domain.Address;
 import com.diogoalves.commerce.domain.Client;
 import com.diogoalves.commerce.dto.AddressDTO;
 import com.diogoalves.commerce.repositories.AddressRepository;
+import com.diogoalves.commerce.services.IAddressService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,7 +12,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class AddressService {
+public class AddressService implements IAddressService {
 
     @Autowired
     AddressRepository addressRepository;
@@ -22,8 +23,7 @@ public class AddressService {
     }
     public List<AddressDTO> findByEmailAddress(Client client) {
         List<Address> addressList = addressRepository.findByClient(client.getId());
-        List<AddressDTO> addressDTOList = addressList.stream().map(obj -> fromAddress(obj)).collect(Collectors.toList());
-        return addressDTOList;
+        return addressList.stream().map(this::fromAddress).collect(Collectors.toList());
     }
     private Address fromAddressDTO(AddressDTO addressDTO){
         Address address = new Address();

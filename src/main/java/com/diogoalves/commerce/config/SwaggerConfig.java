@@ -35,7 +35,7 @@ public class SwaggerConfig implements WebMvcConfigurer {
                 .globalResponseMessage(RequestMethod.PUT, Arrays.asList(m204put, m404, m422, m500))
                 .globalResponseMessage(RequestMethod.DELETE, Arrays.asList(m204del, m404, m500))
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.diogoalves.commerce.resources"))
+                .apis(RequestHandlerSelectors.basePackage("com.diogoalves.commerce.controllers"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(apiInfo());

@@ -1,11 +1,11 @@
-package com.diogoalves.commerce.resources;
+package com.diogoalves.commerce.controllers;
 
 import com.diogoalves.commerce.domain.Address;
 import com.diogoalves.commerce.domain.Client;
 import com.diogoalves.commerce.dto.AddressDTO;
 import com.diogoalves.commerce.dto.CepDTO;
-import com.diogoalves.commerce.services.AddressService;
-import com.diogoalves.commerce.services.ClientService;
+import com.diogoalves.commerce.services.impl.AddressService;
+import com.diogoalves.commerce.services.impl.ClientService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -22,7 +22,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class AddressResourceTest {
+class AddressControllerTest {
 
     @Autowired
     MockMvc mockMvc;

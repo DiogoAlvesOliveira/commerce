@@ -1,8 +1,8 @@
-package com.diogoalves.commerce.resources;
+package com.diogoalves.commerce.controllers;
 
 import com.diogoalves.commerce.dto.AddressDTO;
 import com.diogoalves.commerce.dto.CepDTO;
-import com.diogoalves.commerce.services.CepService;
+import com.diogoalves.commerce.services.impl.CepService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +16,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class CepResourceTest {
+class CepControllerTest {
 
     @Autowired
     MockMvc mockMvc;

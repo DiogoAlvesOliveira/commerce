@@ -1,8 +1,8 @@
-package com.diogoalves.commerce.resources;
+package com.diogoalves.commerce.controllers;
 
 import com.diogoalves.commerce.domain.Client;
 import com.diogoalves.commerce.dto.ClientDTO;
-import com.diogoalves.commerce.services.ClientService;
+import com.diogoalves.commerce.services.impl.ClientService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -23,7 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class ClientResourceTest {
+class ClientControllerTest {
 
     @Autowired
     MockMvc mockMvc;

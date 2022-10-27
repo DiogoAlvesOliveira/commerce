@@ -1,8 +1,8 @@
-package com.diogoalves.commerce.resources;
+package com.diogoalves.commerce.controllers;
 
 import com.diogoalves.commerce.dto.ProductDTO;
 import com.diogoalves.commerce.dto.ProductWithOrdesDTO;
-import com.diogoalves.commerce.services.ProductService;
+import com.diogoalves.commerce.services.impl.ProductService;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class ProductResourceTest {
+class ProductControllerTest {
 
     @Autowired
     MockMvc mockMvc;

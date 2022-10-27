@@ -1,9 +1,10 @@
-package com.diogoalves.commerce.services;
+package com.diogoalves.commerce.services.impl;
 
 import com.diogoalves.commerce.domain.Order;
 import com.diogoalves.commerce.domain.Product;
 import com.diogoalves.commerce.dto.*;
 import com.diogoalves.commerce.repositories.ProductRepository;
+import com.diogoalves.commerce.services.IProductService;
 import com.diogoalves.commerce.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -13,7 +14,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
-public class ProductService {
+public class ProductService implements IProductService {
 
     @Autowired
     ProductRepository productRepository;

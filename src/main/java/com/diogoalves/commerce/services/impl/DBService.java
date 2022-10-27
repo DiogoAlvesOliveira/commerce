@@ -1,4 +1,4 @@
-package com.diogoalves.commerce.services;
+package com.diogoalves.commerce.services.impl;
 
 import com.diogoalves.commerce.domain.Address;
 import com.diogoalves.commerce.domain.Client;

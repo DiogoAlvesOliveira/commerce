@@ -4,6 +4,7 @@ import com.diogoalves.commerce.domain.Address;
 import com.diogoalves.commerce.domain.Client;
 import com.diogoalves.commerce.dto.AddressDTO;
 import com.diogoalves.commerce.repositories.AddressRepository;
+import com.diogoalves.commerce.services.impl.AddressService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;

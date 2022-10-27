@@ -1,40 +1,31 @@
-package com.diogoalves.commerce.resources;
+package com.diogoalves.commerce.controllers;
 
+import com.diogoalves.commerce.controllers.api.OrderApi;
 import com.diogoalves.commerce.domain.Client;
 import com.diogoalves.commerce.dto.OrderDTO;
-import com.diogoalves.commerce.services.ClientService;
-import com.diogoalves.commerce.services.OrderService;
-import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
+import com.diogoalves.commerce.services.IClientService;
+import com.diogoalves.commerce.services.IOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/orders")
-@Api( tags = "Orders")
-public class OrderResources {
+public class OrderController implements OrderApi {
 
     @Autowired
-    OrderService ordersService;
+    IOrderService ordersService;
 
     @Autowired
-    ClientService clientService;
+    IClientService clientService;
 
-    @GetMapping
-    @ApiOperation(value="Returns all orders")
     public ResponseEntity<List<OrderDTO>> findAll() {
         List<OrderDTO> orderDTO = ordersService.findAll();
         return ResponseEntity.ok().body(orderDTO);
     }
 
-    @GetMapping(value = "/{email}")
-    @ApiOperation(value="Return order by email")
     public ResponseEntity<List<OrderDTO>> findByEmail(@PathVariable String email){
         Client client = clientService.findByEmail(email);
         List<OrderDTO> orderDTOList = ordersService.findByEmail(client);

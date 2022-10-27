@@ -1,7 +1,6 @@
 package com.diogoalves.commerce.config;
 
-import com.diogoalves.commerce.services.DBService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.diogoalves.commerce.services.impl.DBService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

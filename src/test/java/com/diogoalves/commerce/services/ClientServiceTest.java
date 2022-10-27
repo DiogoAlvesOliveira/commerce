@@ -5,6 +5,7 @@ import com.diogoalves.commerce.dto.ClientDTO;
 import com.diogoalves.commerce.repositories.ClientRepository;
 import com.diogoalves.commerce.services.exceptions.DataIntegrityException;
 import com.diogoalves.commerce.services.exceptions.ObjectNotFoundException;
+import com.diogoalves.commerce.services.impl.ClientService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;

@@ -5,6 +5,7 @@ import com.diogoalves.commerce.dto.ProductDTO;
 import com.diogoalves.commerce.dto.ProductWithOrdesDTO;
 import com.diogoalves.commerce.repositories.ProductRepository;
 import com.diogoalves.commerce.services.exceptions.ObjectNotFoundException;
+import com.diogoalves.commerce.services.impl.ProductService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;

@@ -1,8 +1,9 @@
-package com.diogoalves.commerce.services;
+package com.diogoalves.commerce.services.impl;
 
 import com.diogoalves.commerce.domain.Client;
 import com.diogoalves.commerce.dto.ClientDTO;
 import com.diogoalves.commerce.repositories.ClientRepository;
+import com.diogoalves.commerce.services.IClientService;
 import com.diogoalves.commerce.services.exceptions.DataIntegrityException;
 import com.diogoalves.commerce.services.exceptions.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,15 +13,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class ClientService {
+public class ClientService implements IClientService {
 
     @Autowired
     ClientRepository clientRepository;
 
     public List<ClientDTO> findAll() {
         List<Client> clientList = clientRepository.findAll();
-        List<ClientDTO> clientDTOList = clientList.stream().map(obj -> new ClientDTO(obj)).collect(Collectors.toList());
-        return clientDTOList;
+        return clientList.stream().map(ClientDTO::new).collect(Collectors.toList());
     }
 
     public Client findByEmail(String email) {

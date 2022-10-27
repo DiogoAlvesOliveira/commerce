@@ -1,6 +1,7 @@
 package com.diogoalves.commerce.services;
 
 import com.diogoalves.commerce.dto.AddressDTO;
+import com.diogoalves.commerce.services.impl.CepService;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.runner.RunWith;

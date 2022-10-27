@@ -1,9 +1,9 @@
-package com.diogoalves.commerce.resources;
+package com.diogoalves.commerce.controllers;
 
 import com.diogoalves.commerce.domain.Client;
 import com.diogoalves.commerce.dto.OrderDTO;
-import com.diogoalves.commerce.services.ClientService;
-import com.diogoalves.commerce.services.OrderService;
+import com.diogoalves.commerce.services.impl.ClientService;
+import com.diogoalves.commerce.services.impl.OrderService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;

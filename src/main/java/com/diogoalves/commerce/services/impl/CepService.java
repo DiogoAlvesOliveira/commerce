@@ -1,7 +1,8 @@
-package com.diogoalves.commerce.services;
+package com.diogoalves.commerce.services.impl;
 
 import com.diogoalves.commerce.dto.AddressDTO;
 import com.diogoalves.commerce.dto.CepDTO;
+import com.diogoalves.commerce.services.ICepService;
 import com.diogoalves.commerce.services.exceptions.ObjectNotFoundException;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,7 +15,7 @@ import java.net.URL;
 import java.net.URLConnection;
 
 @Service
-public class CepService {
+public class CepService implements ICepService {
 
     @Value("${default.url}")
     private String viaCep;

@@ -1,4 +1,4 @@
-package com.diogoalves.commerce.resources.exceptions;
+package com.diogoalves.commerce.controllers.exceptions;
 
 import com.diogoalves.commerce.services.exceptions.DataIntegrityException;
 import com.diogoalves.commerce.services.exceptions.ObjectNotFoundException;

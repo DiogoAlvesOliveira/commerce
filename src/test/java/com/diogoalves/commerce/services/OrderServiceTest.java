@@ -4,6 +4,7 @@ import com.diogoalves.commerce.domain.Client;
 import com.diogoalves.commerce.domain.Order;
 import com.diogoalves.commerce.dto.OrderDTO;
 import com.diogoalves.commerce.repositories.OrderRepository;
+import com.diogoalves.commerce.services.impl.OrderService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
